@@ -1,0 +1,190 @@
+/**** navbar y header ****/
+header{
+	padding-bottom: 200px;
+	//max-height: 100%;
+}
+.navbar-default{
+	background-color: transparent;
+	border-bottom: none;
+}
+.navbar-default .nav>li>a {
+	position: relative;
+	display: block;
+	padding: 10px 25px;
+	color: $lightyellow;
+	font-size: 20px;
+}
+.navbar-default .nav>li>a:hover{
+	background-color: transparent;
+	color: $verdecito;
+	text-decoration: underline overline;
+}
+.intro-me{//primera seccion donde está el video
+	max-width: 100%;
+	height: 100%;
+}
+.video-cont{ /*el hidden permite q no se mueva el video de su contenedor, y q no se vea más grande*/ 
+	overflow: hidden;
+}
+.video-cont video{
+	@include videito();
+}
+.name{
+	margin-top: 180px;
+	width: 100%;
+
+	@-webkit-keyframes typing { from { width: 0; } }
+	@-webkit-keyframes blink-caret { 50% { border-color: transparent; } }
+
+	h1{
+		@include hi();
+	}
+	h2{
+		@extend h1;
+		font-size: 50px;
+	}
+}
+
+/****responsive****/
+@media (max-width: 450px){
+	header{
+		background: url("../img/nicebg.jpg");
+		background-position: center;
+		background-size: 100%;
+		background-repeat: no-repeat;
+		background-position: 30% 30%;
+		height: 200px;
+		opacity: 0.5;
+	}
+	.name h1{
+		font-size: 120%;
+		margin-right: 0px;
+		-webkit-text-fill-color: #080808; /* Will override color (regardless of order) */
+		-webkit-text-stroke-width: 0.5px;
+		-webkit-text-stroke-color: #080808;
+		margin-top: -90px;
+		margin-left: 20px;
+		opacity: 1;
+	}
+	.about{
+		padding: 45px 70px;
+
+		img{
+			padding-top: 20px;
+			margin-top: -70px;
+		}
+	}
+}
+
+
+/****sección about me ****/
+.about{
+	padding: 90px 65px;
+	max-height: 100%;
+	background-color: $choco;
+	color: #111;
+	text-align: center;
+	font-family: $font0;
+	border-top: 2px solid pink;
+	/*** animation with css ****/
+	.anim-text-flow,
+	.anim-text-flow-hover:hover {
+		/* Animation variables */
+		$animationSteps: 20;
+		$animationDuration: 50;
+		$animationElement: span;
+		$animationElementsCount: 500;
+		$delayBetweenLetters: 0.2;
+		/* Elements settings*/
+		#{$animationElement} {
+			animation-name: anim-text-flow-keys;
+			animation-duration: #{$animationDuration}s;
+			animation-iteration-count: infinite;
+			animation-direction: alternate;
+			animation-fill-mode: forwards;
+		}
+		/* Keyframe loop */
+		@keyframes anim-text-flow-keys {
+			@for $i from 0 through $animationSteps {
+				#{percentage($i * (1 / $animationSteps))} {
+					color: hsla(random(500), 20, 35, 15);
+				}
+			}
+		}
+		/* Element animation delay loop*/
+		$totalDelayTime: $animationElementsCount * $delayBetweenLetters;
+
+		@for $i from 1 through $animationElementsCount {
+			#{$animationElement}:nth-of-type(#{$i}) {
+				animation-delay: #{($i * $delayBetweenLetters) - $totalDelayTime}s;
+			}
+		}
+	}
+	/****** colorful text *****/
+	.txt {
+		display: block;
+		font-size: 30px;
+		padding-top: 70px;
+	}
+}
+
+/*** cajas de projectos - thumbnails ****/
+#portfolio {
+	padding-top: 70px;
+	padding-bottom: 70px;
+	background-color: $rose;
+
+	h1{
+		padding-bottom: 30px;
+		font-family: $font2;
+		font-weight: $negrita;
+		font-size: 50px;
+	}
+}
+
+.thumbnail {
+	position: relative;
+	overflow: hidden;
+	background-color: $gray;
+
+	img{
+		border-radius: 8px;
+		height: 230px;
+	}
+	.celu{
+		background-color: $yellow;
+		margin-top: 5px;
+		margin-bottom: 3px;
+	}
+}
+.caption {
+	position: absolute;
+	top: 10px;
+	right: 0;
+	background: #1C4262;
+	width: 100%;
+	height: 100%;
+	padding: 20%;
+	display: none;
+	text-align: center;
+	color: #fff !important;
+	z-index: 2;
+
+	h4
+
+	p{
+		margin: 30px 40px 45px;
+	}
+
+	.label-danger[href]:hover {
+		background-color: #c9302c;
+		padding: 10px 15px;
+		font-size: 16px;
+	}
+
+	.label-default[href]:hover {
+		background-color: #5e5e5e;
+		padding: 10px 15px;
+		font-size: 16px;
+	}
+}

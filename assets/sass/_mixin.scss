@@ -1,0 +1,32 @@
+ @mixin videito() {
+ 	width: 100%;
+	//height: 100%; NOT SURE!
+	position: absolute;
+	top: -100px;
+	left: 0px;
+	z-index: -1000;
+	overflow: hidden;
+	-webkit-filter: blur(7px);
+	-moz-filter: blur(7px);
+	-o-filter: blur(7px);
+	-ms-filter: blur(7px);
+	filter: blur(7px);
+}
+
+@mixin hi(){
+	-webkit-text-fill-color: #fff7f7; /* Will override color (regardless of order) */
+	-webkit-text-stroke-width: 1px;
+	-webkit-text-stroke-color: black;
+	font-size: 80px;
+	font-family: $font3;
+	font-weight: $negrita;
+	text-transform: $may;
+	-webkit-animation: flipInX 3s;
+	border-right: .1em solid black;
+	width: 80%; 
+	margin: 120px;
+	white-space: nowrap;
+	overflow: hidden;
+	-webkit-animation: typing 2s steps(21, end), 
+	blink-caret .5s step-end infinite alternate;
+}
