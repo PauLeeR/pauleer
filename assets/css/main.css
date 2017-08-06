@@ -3,22 +3,6 @@
 header {
   padding-bottom: 200px; }
 
-.navbar-default {
-  background-color: transparent;
-  border-bottom: none; }
-
-.navbar-default .nav > li > a {
-  position: relative;
-  display: block;
-  padding: 10px 25px;
-  color: #FFFCB1;
-  font-size: 20px; }
-
-.navbar-default .nav > li > a:hover {
-  background-color: transparent;
-  color: #00b200;
-  text-decoration: underline overline; }
-
 .intro-me {
   max-width: 100%;
   height: 100%; }
@@ -90,11 +74,28 @@ header {
     margin-left: 20px;
     opacity: 1; }
 
-  .about {
-    padding: 45px 70px; }
-    .about img {
-      padding-top: 20px;
-      margin-top: -70px; } }
+  .about img {
+    padding-top: 20px;
+    margin-top: -60px; }
+  .about .small {
+    text-align: center;
+    margin-top: -30px; }
+
+  #skills {
+    margin-top: -50px;
+    margin-bottom: -100px; }
+
+  #portfolio .some, #skills .some, #contact .some {
+    font-size: 20px;
+    margin-top: -20px; }
+
+  .pulse {
+    margin-bottom: 10px; }
+
+  #contact .callme {
+    text-align: center; }
+  #contact .mysocials {
+    margin-bottom: -90px; } }
 /****sección about me ****/
 .about {
   padding: 90px 65px;
@@ -121,47 +122,47 @@ header {
       animation-fill-mode: forwards; }
 @keyframes anim-text-flow-keys {
   0% {
-    color: #576b47; }
+    color: #6b4759; }
   5% {
-    color: #476b52; }
+    color: #536b47; }
   10% {
-    color: #6b4b47; }
+    color: #566b47; }
   15% {
-    color: #66476b; }
+    color: #6b4762; }
   20% {
-    color: #476b60; }
+    color: #47526b; }
   25% {
-    color: #64476b; }
+    color: #6b4d47; }
   30% {
-    color: #6b5f47; }
+    color: #656b47; }
   35% {
-    color: #476b47; }
+    color: #536b47; }
   40% {
-    color: #6b475a; }
+    color: #474f6b; }
   45% {
-    color: #49476b; }
+    color: #6b6347; }
   50% {
-    color: #6b4947; }
+    color: #546b47; }
   55% {
-    color: #66476b; }
+    color: #6b475e; }
   60% {
-    color: #476b48; }
+    color: #536b47; }
   65% {
-    color: #586b47; }
+    color: #486b47; }
   70% {
-    color: #6b4756; }
+    color: #596b47; }
   75% {
-    color: #47596b; }
+    color: #6b6447; }
   80% {
-    color: #6b4f47; }
+    color: #6b5947; }
   85% {
-    color: #47636b; }
+    color: #6b475f; }
   90% {
-    color: #5e6b47; }
+    color: #6b4758; }
   95% {
-    color: #6b4b47; }
+    color: #54476b; }
   100% {
-    color: #6b5047; } }
+    color: #475c6b; } }
     .about .anim-text-flow span:nth-of-type(1),
     .about .anim-text-flow-hover:hover span:nth-of-type(1) {
       animation-delay: -99.8s; }
@@ -1668,12 +1669,16 @@ header {
     padding-top: 70px; }
 
 /*** cajas de projectos - thumbnails ****/
+hr {
+  border: 1px solid #7f0000;
+  width: 70%; }
+
 #portfolio {
   padding-top: 70px;
   padding-bottom: 70px;
   background-color: #DDC5A2; }
   #portfolio h1, #portfolio .name h2, .name #portfolio h2 {
-    padding-bottom: 30px;
+    padding-bottom: 20px;
     font-family: "Playfair Display", serif;
     font-weight: bolder;
     font-size: 50px; }
@@ -1702,8 +1707,7 @@ header {
   text-align: center;
   color: #fff !important;
   z-index: 2; }
-  .caption h4
-  p {
+  .caption p {
     margin: 30px 40px 45px; }
   .caption .label-danger[href]:hover {
     background-color: #c9302c;
@@ -1713,5 +1717,47 @@ header {
     background-color: #5e5e5e;
     padding: 10px 15px;
     font-size: 16px; }
+
+#skills {
+  background-color: #F1F3C3;
+  padding-top: 70px;
+  padding-bottom: 120px; }
+  #skills h1, #skills .name h2, .name #skills h2 {
+    padding-bottom: 20px;
+    font-family: "Playfair Display", serif;
+    font-weight: bolder;
+    font-size: 50px; }
+  #skills i {
+    font-size: 5em; }
+
+#contact {
+  padding-top: 70px;
+  padding-bottom: 120px;
+  background-color: #C9A66B; }
+  #contact h2 {
+    padding-bottom: 20px;
+    font-family: "Playfair Display", serif;
+    font-weight: bolder;
+    font-size: 50px; }
+  #contact ul li {
+    list-style: none; }
+  #contact .callme {
+    font-size: 26px; }
+  #contact .map {
+    margin-left: 36px; }
+  #contact .mysocials {
+    padding: 30px; }
+    #contact .mysocials .github, #contact .mysocials .lin {
+      color: #08537c;
+      margin-right: 20px; }
+
+footer {
+  background-color: #500805;
+  padding: 20px;
+  color: #ffffff;
+  font-size: 18px;
+  font-family: #font1; }
+  footer i {
+    color: #FF008D; }
 
 /*# sourceMappingURL=main.css.map */

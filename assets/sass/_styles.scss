@@ -3,22 +3,12 @@ header{
 	padding-bottom: 200px;
 	//max-height: 100%;
 }
-.navbar-default{
-	background-color: transparent;
-	border-bottom: none;
-}
-.navbar-default .nav>li>a {
-	position: relative;
-	display: block;
-	padding: 10px 25px;
-	color: $lightyellow;
-	font-size: 20px;
-}
-.navbar-default .nav>li>a:hover{
-	background-color: transparent;
-	color: $verdecito;
-	text-decoration: underline overline;
-}
+
+
+
+
+
+
 .intro-me{//primera seccion donde está el video
 	max-width: 100%;
 	height: 100%;
@@ -67,15 +57,44 @@ header{
 		opacity: 1;
 	}
 	.about{
-		padding: 45px 70px;
-
 		img{
 			padding-top: 20px;
-			margin-top: -70px;
+			margin-top: -60px;
+		}
+		.small {
+			text-align: center;
+			margin-top: -30px;
+		}
+	}
+
+	#skills{
+		margin-top: -50px;
+		margin-bottom: -100px;
+	}
+
+	#portfolio, #skills, #contact{
+		//padding: 20px 20px;
+
+		.some {
+			font-size: 20px;
+			margin-top: -20px;
+		}
+	}
+	
+	.pulse{
+		margin-bottom: 10px;
+	}
+
+	#contact{
+		.callme{
+			text-align: center;
+		}
+
+		.mysocials{
+			margin-bottom: -90px;
 		}
 	}
 }
-
 
 /****sección about me ****/
 .about{
@@ -129,16 +148,18 @@ header{
 }
 
 /*** cajas de projectos - thumbnails ****/
+hr{
+	border: 1px solid #7f0000;
+	width: 70%;
+}
+
 #portfolio {
 	padding-top: 70px;
 	padding-bottom: 70px;
 	background-color: $rose;
 
 	h1{
-		padding-bottom: 30px;
-		font-family: $font2;
-		font-weight: $negrita;
-		font-size: 50px;
+		@include titulo();
 	}
 }
 
@@ -170,8 +191,6 @@ header{
 	color: #fff !important;
 	z-index: 2;
 
-	h4
-
 	p{
 		margin: 30px 40px 45px;
 	}
@@ -186,5 +205,63 @@ header{
 		background-color: #5e5e5e;
 		padding: 10px 15px;
 		font-size: 16px;
+	}
+}
+
+#skills{
+	background-color: $ivory;
+	padding-top: 70px;
+	padding-bottom: 120px;
+
+	h1 {
+		@include titulo();
+	}
+
+	i{
+		font-size: 5em;
+	}	
+
+}
+
+#contact{
+	padding-top: 70px;
+	padding-bottom: 120px;
+	background-color: $caramelo;
+
+	h2{
+		@include titulo();
+	}
+
+	ul li{
+		list-style: none;
+	}
+
+	.callme{
+		font-size: 26px;
+	}
+	
+	.map{
+		margin-left: 36px;
+	}
+
+	.mysocials{
+		padding: 30px;
+
+		.github, .lin{
+			color: $lin;
+			margin-right: 20px;
+		}
+	}
+}
+
+
+footer {
+	background-color: $pie;
+	padding: 20px;
+	color: $white;
+	font-size: 18px;
+	font-family: #font1;
+	i {
+		color: #FF008D; 
 	}
 }
