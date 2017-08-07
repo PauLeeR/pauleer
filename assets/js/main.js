@@ -22,3 +22,8 @@ jQuery(document.links).filter(function() { //this function gives all links withi
 }) .attr('target', '_blank'); 
 
 });
+
+$('.navbar-toggler').on('click', function(event) {
+    event.preventDefault();
+    $(this).closest('.navbar-minimal').toggleClass('open');
+  })
