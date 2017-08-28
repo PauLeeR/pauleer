@@ -193,7 +193,7 @@ header{
 		}
 
 		.name h1{
-			font-size: 150%;
+			font-size: 170%;
 			-webkit-text-fill-color: #080808; /* Will override color (regardless of order) */
 			-webkit-text-stroke-width: 0.5px;
 			-webkit-text-stroke-color: #080808;
@@ -220,12 +220,15 @@ header{
 	#skills{
 		margin-top: -50px;
 		margin-bottom: -100px;
+		
 		.mtz{
 			margin-left: 0px;
 			//margin-top: 20px;
 		}
 		.mtz-pic{
-			width: 130%;
+			width: 80px;
+			margin-left: 5px;
+			margin-top: 10px;
 		}
 	}
 }
@@ -338,7 +341,10 @@ header{
 
 	i{
 		font-size: 5em;
-	}	
+	}
+	.mtz-pic{
+		width: 80px;
+	}
 }
 
 
@@ -358,7 +364,7 @@ header{
 	.callme{
 		font-size: 26px;
 	}
-	
+
 	.map{
 		margin-left: 36px;
 	}
