@@ -17,7 +17,7 @@ $( document ).ready(function() { //with this function, a tooltip or "hover box" 
           }
           ); 
 
-jQuery(document.links).filter(function() { //this function gives all links within the document the attribute "_blank", which allows to open it in a new window
+jQuery(document.links).filter(function() { //this function gives all the links within the document the attribute "_blank", which allows to open it in a new window
   return this.hostname != window.location.hostname; 
 }) .attr('target', '_blank'); 
 
