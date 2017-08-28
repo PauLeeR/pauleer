@@ -111,7 +111,6 @@ header{
 		-ms-transform: rotate(-180deg);
 		transform: rotate(-180deg);
 	}
-
 	.navbar-minimal.open > .navbar-menu {
 		top: 60px;
 		width: 100%;
@@ -150,8 +149,8 @@ header{
 		background-size: 100%;
 		background-repeat: no-repeat;
 		background-position: 30% 30%;
-		height: 200px;
-		opacity: 0.5;
+		height: 260px;
+		opacity: 1.5;
 		.navbar-minimal.open {
 			width: 60px;
 		}
@@ -193,112 +192,81 @@ header{
 		}
 
 		.name h1{
-			font-size: 120%;
-			margin-right: 0px;
+			font-size: 150%;
 			-webkit-text-fill-color: #080808; /* Will override color (regardless of order) */
 			-webkit-text-stroke-width: 0.5px;
 			-webkit-text-stroke-color: #080808;
-			margin-top: -90px;
-			margin-left: 20px;
-			opacity: 1;
+			margin-top: -70px;
+			margin-left: 40px;
 		}
 	}
 	
 	.about{
+		font-size: 20px;
 		img{
-			padding-top: 20px;
-			margin-top: -60px;
+			margin-top: 20px;
 		}
 		.small {
 			text-align: center;
-			margin-top: -30px;
+			//margin-top: -55px;
+		}
+		.txt{
+			font-size: 22px;
+			padding-top: 20px;	
 		}
 	}
 
 	#skills{
 		margin-top: -50px;
 		margin-bottom: -100px;
-	}
-
-	#portfolio, #skills, #contact{
-		//padding: 20px 20px;
-
-		.some {
-			font-size: 20px;
-			margin-top: -20px;
+		.mtz{
+			max-width: 130%;
+			margin-left: 5px;
+			margin-top: 20px;
 		}
 	}
-	
-	.pulse{
-		margin-bottom: 10px;
+}
+
+#about, #portfolio, #skills, #contact{
+	.some {
+		font-size: 36px;
+		margin-top: -30px;
+	}
+}
+
+.pulse{
+	margin-bottom: 10px;
+}
+
+#contact{
+	.callme{
+		text-align: center;
 	}
 
-	#contact{
-		.callme{
-			text-align: center;
-		}
-
-		.mysocials{
-			margin-bottom: -90px;
-		}
+	.mysocials{
+		margin-bottom: -90px;
 	}
 }
 
 /****sección about me ****/
 .about{
-	padding: 90px 65px;
+	padding: 70px 65px;
 	max-height: 100%;
-	background-color: $choco;
-	color: #111;
+	background-color: $rose;
+	color: #212121;
 	text-align: center;
 	font-family: $font0;
-	border-top: 2px solid pink;
-	/*** animation with css ****/
-	.anim-text-flow,
-	.anim-text-flow-hover:hover {
-		/* Animation variables */
-		$animationSteps: 20;
-		$animationDuration: 50;
-		$animationElement: span;
-		$animationElementsCount: 500;
-		$delayBetweenLetters: 0.2;
-		/* Elements settings*/
-		#{$animationElement} {
-			animation-name: anim-text-flow-keys;
-			animation-duration: #{$animationDuration}s;
-			animation-iteration-count: infinite;
-			animation-direction: alternate;
-			animation-fill-mode: forwards;
-		}
-		/* Keyframe loop */
-		@keyframes anim-text-flow-keys {
-			@for $i from 0 through $animationSteps {
-				#{percentage($i * (1 / $animationSteps))} {
-					color: hsla(random(500), 20, 35, 15);
-				}
-			}
-		}
-		/* Element animation delay loop*/
-		$totalDelayTime: $animationElementsCount * $delayBetweenLetters;
+	//border-top: 2px solid pink;
 
-		@for $i from 1 through $animationElementsCount {
-			#{$animationElement}:nth-of-type(#{$i}) {
-				animation-delay: #{($i * $delayBetweenLetters) - $totalDelayTime}s;
-			}
-		}
+	h1{
+		@include titulo();
 	}
-	/****** colorful text *****/
+
 	.txt {
 		display: block;
-		font-size: 30px;
-		padding-top: 70px;
+		font-size: 22px;
+		padding-top: 20px;
 	}
-}
-
-/*** cajas de projectos - thumbnails ****/
-hr{
-	border: 1px solid #7f0000;
-	width: 70%;
 }
 
 #portfolio {
@@ -359,7 +327,7 @@ hr{
 #skills{
 	background-color: $ivory;
 	padding-top: 70px;
-	padding-bottom: 120px;
+	padding-bottom: 130px;
 
 	h1 {
 		@include titulo();
@@ -368,15 +336,21 @@ hr{
 	i{
 		font-size: 5em;
 	}	
+	.mtz{
+		max-width: 40%;
+		/* height: auto; */
+		margin-left: -5px;
+	}
 
 }
+
 
 #contact{
 	padding-top: 70px;
 	padding-bottom: 120px;
 	background-color: $caramelo;
 
-	h2{
+	h1{
 		@include titulo();
 	}
 
@@ -396,7 +370,7 @@ hr{
 		padding: 30px;
 
 		.github, .lin{
-			color: $lin;
+			color: $pie;
 			margin-right: 20px;
 		}
 	}
@@ -408,7 +382,7 @@ footer {
 	padding: 20px;
 	color: $white;
 	font-size: 18px;
-	font-family: #font1;
+	font-family: #font0;
 	i {
 		color: #FF008D; 
 	}
